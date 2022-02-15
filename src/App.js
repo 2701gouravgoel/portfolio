@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,12 +30,12 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Switch>
+        <Routes>
           <Route path="/" exact element={<Home/>} />
           <Route path="/project" element={<Projects/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/resume" element={<Resume/>} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
