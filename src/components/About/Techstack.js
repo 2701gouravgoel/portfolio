@@ -10,7 +10,7 @@ import {
   DiGit,
   DiAngularSimple
 } from "react-icons/di";
-import { SiPytorch, SiTensorflow, SiFirebase } from "react-icons/si";
+import { SiFirebase } from "react-icons/si";
 
 function Techstack() {
   return (
