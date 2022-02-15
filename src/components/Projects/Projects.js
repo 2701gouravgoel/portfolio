@@ -4,11 +4,8 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
 import leaf from "../../Assets/shopping.jpeg";
-import emotion from "../../Assets/Projects/emotion.jpeg";
 import editor from "../../Assets/playBingo.jpeg";
 import chatify from "../../Assets/nociw.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 
 function Projects() {
   return (
