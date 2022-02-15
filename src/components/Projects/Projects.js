@@ -3,10 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 
-import leaf from "../../Assets/Projects/leaf.png";
+import leaf from "../../Assets/shopping.jpeg";
 import emotion from "../../Assets/Projects/emotion.jpeg";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
+import editor from "../../Assets/playBingo.jpeg";
+import chatify from "../../Assets/nociw.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
@@ -18,7 +18,36 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p >
+          Here are projects I've worked as intern.
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Truminds Intern"
+              description="Implementing Communication service and sending email and sms for different triggers inside the whole online exam proctoring application. Work as debugger and developer in various service, includes creating and
+              fetching Json, model, dataBase rollback, rest Api for a wide interconnected
+              services at different port."
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              title="Zynas Project"
+              description="Implement the database structure, for different type of users, and chats. Implement the role based firestore access. Implement the redux and write actions with client side firebase sdk. Full control over project as full stack developer, debugger and currently working as maintaince of project."
+            />
+          </Col>
+          
+          <Col md={4} className="project-card">
+            <ProjectCard
+              isBlog={false}
+              title="Galk Portal Project"
+              description="Worked as full stack developer, where I added pages for create a new job, edit the job, deleting the job and provide all jobs to both companies and student over the application. Stacks used in the application are reactJs, Firebase auth, Firestore, react-redux"
+            />
+          </Col>
+        </Row>
+      
+        <p >
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -26,9 +55,10 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              link="https://github.com/soumyajit4419/Chatify"
+              isApp={true}
+              title="Nociw Startup"
+              description="Personal media cum people map application, which includes chats, post sharing and party/official invitation among contacts and promotion with in the whole database of users to a particular target audiance. I implemented the whole application wrt refrence given by our non-technical team and later add fews tech team members who also contributed in adding some of the new functionalites. Tech stacks used in application are react-native, nodeJs, firebase, mongoDb, heroku, aws"
+              link="https://play.google.com/store/apps/details?id=com.nociw.nociw"
             />
           </Col>
 
@@ -36,9 +66,11 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              link="https://github.com/soumyajit4419/Plant_AI"
+              title="ShoppingApp"
+              description="E-shopping platform developed for local retailers using React.
+              Features include sign in/ sign out option, add to card, ratings and reviews,
+              add item along with many other features. Tech stacks and languages used in the application are reactJs, nodeJs, react-redux, MongoDB, css, html"
+              link="https://github.com/2701gouravgoel/shopingApp"
             />
           </Col>
 
@@ -46,40 +78,32 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              link="https://github.com/soumyajit4419/Editor.io"
+              title="PlayBingo"
+              description="It’s a 2 player game with client side build in android studio and server side in
+              NodeJs and javascript. All basic and necessary calculations and data storage had done in server side. Tech stacks and languages used in apllication are Android Studio, NodeJs, Java, MongoDb, Sql"
+              link="https://github.com/GameForces/playBingo"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              link="https://github.com/soumyajit4419/Bits-0f-C0de"
+              title="Atomic layers"
+              description="It’s difficult to count the numbers of layer in microscopic image and
+              might have some error. Aim is to make it easier and precised to
+              count total number layers, width of layers, gap between them.Code will check the layers count across the drawn line by the user
+              using opencv. Developed GUI to get Interact with images. Use histogram and detect the lines as no. of peaks in the graph."
+              link="https://github.com/rajangarhwal/Atomic_layers"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              link="https://github.com/soumyajit4419/AI_For_Social_Good"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              link="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+              title="Todo"
+              description="Creating model to save the list of tasks(completed & uncompleted).
+              Task can be deleted on click by the user. Frontend includes form to add task and list of tasks."
+              link="https://github.com/2701gouravgoel/to-do-"
             />
           </Col>
         </Row>
